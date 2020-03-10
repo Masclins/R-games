@@ -1,6 +1,7 @@
-### ROUTE OF THE FOLDER ###
-route <- "~/games/SPB"
-###########################
+## ROUTE OF THE FOLDER ##
+route <- commandArgs(trailingOnly=TRUE)[1]
+##########################
+
 source(paste(route,"Engine.R", sep="/"))
 
 players <- c(getPlayers(paste(route, "players", sep = "/")),
@@ -21,5 +22,5 @@ analyzeResults <- function(results) {
   results[,c("TOTAL", "TIEBREAK")] <- round(results[,c("TOTAL", "TIEBREAK")], 2)
   results
 }
-
-analyzeResults(tournament$results)
+options(width=160)
+print(analyzeResults(tournament$results))
