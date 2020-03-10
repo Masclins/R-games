@@ -30,7 +30,3 @@ The function and the file it's on should share name:
 > eg: `botName <- function(h1, h2) { ... }` in `/players/botName.R`
 
 If your bot is deterministic (i.e., has no random decision) feel free to add  `deterministic <- TRUE` at the end of your bot's file, so the tournament takes less to execute.
-
-## Run the game
-You'll only need to execute the script passing the SPB folder as an argument:
-> e.g. `Rscript play.R ~/R-games/SPB` 
