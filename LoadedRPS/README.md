@@ -25,17 +25,17 @@ After 100 plays, the one with more points is the winner.
 You have to create a function that takes each of these variables as an argument on each execution:
 
     my_points, opp_points, my_loaded, opp_loaded, my_history, opp_history
-`points` - Current points (yours and your opp)
+`points` - Current points (yours and your opp). 
 
-`loaded`- Array with loads (in order RPS) (yours and your opp)
+`loaded`- Numeric vectors with loads (in order RPS) (yours and your opp)
 
-`history`- String with all plays, last character is the last play (yours and your opp)
+`history`- Character vectors with all plays, last character is the last play (yours and your opp)
 
-You must return `"R"`, `"P"` or `"S"`. If you want to return something different, it would be an automatic lose of the match.
+You must return `"R"`, `"P"` or `"S"`. If return something different, you're disqualified.
 
 You can upload up to three bots. Do so in `/players/`.
 The function and the file it's on should share name:
-> e.g. `botName <- function(my_points, opp_points, my_loaded, opp_loaded, my_history, opp_history) { ... }` in `/players/botName.R`
+> e.g. `botName <- function(my_points, opp_points, my_load, opp_load, my_history, opp_history) { ... }` in `/players/botName.R`
 
 If your bot is deterministic (i.e., has no random decision) feel free to add  `deterministic <- TRUE` at the end of your bot's file, so the tournament takes less to execute.
 
